@@ -60,20 +60,52 @@ Q. Guess the number
 //     console.log("NUmber should be positive");
 //   }
 // }
+// let n = Number(prompt("Enter Your Number"));
+
+// if (isNaN(n)) {
+//   console.log("Invalid Input");
+// } else {
+//   if (n > 0) {
+//     for (let i = 1; i <= Math.floor(n / 2); i++) {
+//       if (n % i === 0) {
+//         console.log(i);
+//       }
+//     }
+//     console.log(n);
+
+//   } else {
+//     console.log("NUmber should be positive");
+//   }
+// }
 let n = Number(prompt("Enter Your Number"));
 
 if (isNaN(n)) {
   console.log("Invalid Input");
 } else {
   if (n > 0) {
-    for (let i = 1; i <= Math.floor(n / 2); i++) {
-      if (n % i === 0) {
-        console.log(i);   
-      }
-    }
-    console.log(n);
-    
+    console.log(fnIsPrime(n));
+
+    // let isPrime = true;
+    // for (let i = 2; i <= Math.floor(n / 2); i++) {
+    //   if (n % 1 === 0) {
+    //     isPrime = false;
+    //     break;
+    //   }
+    // }
+    // console.log(isPrime);
   } else {
     console.log("NUmber should be positive");
   }
+}
+
+function fnIsPrime(n) {
+  if (n <= 1) return false; // 0, 1 are not prime
+  if (n === 2) return true; // 2 is prime
+  if (n % 2 === 0) return false; // Even number (except 2) → not prime
+
+  for (let i = 3; i <= Math.sqrt(n); i += 2) {
+    if (n % i === 0) return false; // divisible → not prime
+  }
+
+  return true;
 }
