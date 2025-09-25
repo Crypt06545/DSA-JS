@@ -1,3 +1,6 @@
+/**
+ * @  check voting eligiblity
+ */
 const voteEligiblity = (age) => {
   if (age !== 18) {
     console.log("You can not vote");
