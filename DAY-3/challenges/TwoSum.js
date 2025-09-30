@@ -5,6 +5,8 @@ const twoSum = (list, tarNum) => {
     for (let j = i + 1; j < list.length; j++) {
       if (list[i] + list[j] === tarNum) {
         // console.log(j);
+        // console.log(j);
+        // console.log(j);
 
         return [i, j];
       }
