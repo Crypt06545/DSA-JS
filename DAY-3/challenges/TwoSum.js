@@ -4,6 +4,8 @@ const twoSum = (list, tarNum) => {
     // console.log(list[i]);
     for (let j = i + 1; j < list.length; j++) {
       if (list[i] + list[j] === tarNum) {
+        // console.log(j);
+
         return [i, j];
       }
     }
