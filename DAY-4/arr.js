@@ -23,3 +23,16 @@
 // };
 
 // console.log(secMax([2, 35, 75, 4, 5, 122, 400]));
+
+// const reverseArray = (arr) => {
+//   let left = 0;
+//   let right = arr.length - 1;
+//   while (left < right) {
+//     [arr[left], arr[right]] = [arr[right], arr[left]];
+//     left++;
+//     right--;
+//   }
+//   return arr;
+// };
+
+// console.log(reverseArray([2, 5, 7, 4, 9]));
