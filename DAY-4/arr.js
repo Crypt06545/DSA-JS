@@ -36,3 +36,23 @@
 // };
 
 // console.log(reverseArray([2, 5, 7, 4, 9]));
+const moveZeroOneInPlace = (arr) => {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left < right) {
+    if (arr[left] === 1 && arr[right] === 0) {
+      // swap করো
+      [arr[left], arr[right]] = [arr[right], arr[left]];
+      left++;
+      right--;
+    }
+    if (arr[left] === 0) left++;
+    if (arr[right] === 1) right--;
+  }
+
+  return arr;
+};
+
+console.log(moveZeroOneInPlace([0, 1, 1, 0, 1, 0, 0, 1]));
+// Output: [0,0,0,0,1,1,1,1]
